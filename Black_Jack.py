@@ -1,5 +1,6 @@
 import Cards, Games
 
+
 class BJ_Card(Cards.Positionable_Card):
     """ Карта для игры в Блек-джек. """
     ACE_VALUE = 1
@@ -14,12 +15,14 @@ class BJ_Card(Cards.Positionable_Card):
             v = None
         return v
 
+
 class BJ_Deck(Cards.Deck):
     """ Колода для игры в Блек-джек """
     def populate(self):
         for suit in BJ_Card.SUITS:
             for rank in BJ_Card.RANKS:
                 self.cards.append(BJ_Card(rank, suit))
+
 
 class BJ_Hand(Cards.Hand):
     """ Рука игрока в Блек-джек """
@@ -58,6 +61,7 @@ class BJ_Hand(Cards.Hand):
     def is_busted(self):
         return self.total > 21
 
+
 class BJ_Player(BJ_Hand):
     """ Игрок в Блек-джек. """
     def is_hitting(self):
@@ -78,6 +82,7 @@ class BJ_Player(BJ_Hand):
     def push(self):
         print(self.name, "сыграл(а) с дилером вничью.")
 
+
 class BJ_Dealer(BJ_Hand):
     """ Дилер в Блек_джек"""
     def is_hitting(self):
@@ -89,6 +94,7 @@ class BJ_Dealer(BJ_Hand):
     def flip_first_card(self):
         first_card = self.cards[0]
         first_card.flip()
+
 
 class BJ_Game:
     """ Игра в Блек-джек. """
@@ -162,6 +168,7 @@ class BJ_Game:
         for player in self.players:
             player.clear()
         self.dealer.clear()
+
 
 def main():
     print("\t\tДобро пожаловать в игру Блек-джек!\n")
