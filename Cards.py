@@ -80,6 +80,6 @@ class Deck(Hand):
                         " карты закончились!")
 
     def errors(self, deck):
-        if Card in deck < 36:
+        if Card in deck < 54:
             self.deck.populate()
             self.deck.shuffle()

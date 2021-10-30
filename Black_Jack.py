@@ -120,7 +120,7 @@ class BJ_Game:
                 player.bust()
 
     def play(self):
-        if self.deck < 36:
+        if self.deck < 54:
             self.deck.populate()
             self.deck.shuffle()
 
