@@ -1,3 +1,6 @@
+from random import random
+
+
 class Card:
     """ Одна игральная карта. """
     RANKS = ["T", "2","3","4","5","6","7",
@@ -79,7 +82,4 @@ class Deck(Hand):
                     print("Не могу больше сдавать:",
                         " карты закончились!")
 
-    def errors(self, deck):
-        if Card in deck < 54:
-            self.deck.populate()
-            self.deck.shuffle()
+
