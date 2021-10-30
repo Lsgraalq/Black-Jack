@@ -169,6 +169,7 @@ class BJ_Game:
             player.clear()
         self.dealer.clear()
 
+
 def main():
     print("\t\tДобро пожаловать в игру Блек-джек!\n")
 
